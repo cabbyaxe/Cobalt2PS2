@@ -30,7 +30,7 @@ Solder your PICO GPIO pins as follows (This assumes a Cobalt Flux dance pad with
 
 
 
-Compile this project using the VSCode raspberry pi pico SDK and flash the UF2 file to the PICO.
+Compile this project using the raspberry pi pico VSCode extension and flash the UF2 file to the pico.
 
 
 ### Acknowledgments
