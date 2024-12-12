@@ -1,6 +1,6 @@
 # Cobalt2PS2
 Enables raspberry pi pico to act as a cobalt flux control box for PS2 games, reading the state of the cobalt flux dance pads and translating those into PS2 button presses
-
+Up, Down, Left, and Right translate to Up, Down, Left, and right on the PS2 controller. Top left translates to "O" and top right translates to "X" on the controller.
 
 ## Setup
 
@@ -30,7 +30,7 @@ Solder your PICO GPIO pins as follows (This assumes a Cobalt Flux dance pad with
 
 
 
-Compile this project using the raspberry pi pico VSCode extension and flash the UF2 file to the pico.
+Compile this project using the raspberry pi pico VSCode extension and flash the UF2 file to the pico (Or flash the compiled UF2 file in the releases section).
 
 
 ### Acknowledgments
