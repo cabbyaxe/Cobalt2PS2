@@ -4,7 +4,7 @@ Up, Down, Left, and Right translate to Up, Down, Left, and right on the PS2 cont
 
 ## Setup
 
-Cut an old PS2 controller cable, and get a DB-15 connector for the cobalt flux dance pad like [this one](https://www.amazon.com/dp/B07F9S61QT)
+Cut an old PS2 controller cable, and get a DB-15 connector for the cobalt flux dance pad like [this one](https://www.amazon.com/dp/B07F9S61QT) or you could attempt to cut up an old VGA cable
 
 PS2 controller pin information is found here: [PSX-SPX](https://psx-spx.consoledev.net/pinouts/#controller-ports-and-memory-card-ports)
 <img src="https://psx-spx.consoledev.net/controller-pinout.jpg" alt="PS2 controller pinout">
@@ -12,7 +12,7 @@ PS2 controller pin information is found here: [PSX-SPX](https://psx-spx.consoled
 Solder the GND pins from the Cobalt Flux dance pad and PS2 controller to GND pins on the pico
 Solder your PICO GPIO pins as follows (This assumes a Cobalt Flux dance pad with a DB-15 connector):
 
-| GPIO Pin  | Second Header |
+| GPIO Pin  | PS2/Cobalt pin |
 | ------------- | ------------- |
 | 5  | PS2 DAT  |
 | 6  | PS2 CMD  |
