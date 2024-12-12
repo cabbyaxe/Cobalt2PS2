@@ -64,18 +64,18 @@
 #define BTN_L3         (1 << 1)
 #define BTN_R3         (1 << 2)
 #define BTN_START      (1 << 3)
-#define BTN_UP    0b00010000
-#define BTN_RIGHT 0b00100000
-#define BTN_DOWN  0b01000000
-#define BTN_LEFT 0b10000000
 #define BTN_L2         (1 << 8)
 #define BTN_R2         (1 << 9)
 #define BTN_L1         (1 << 10)
 #define BTN_R1         (1 << 11)
-#define BTN_TRIANGLE    (1 << 12)
-#define BTN_CIRCLE     (1 << 13)
-#define BTN_CROSS      (1 << 14)
-#define BTN_SQUARE     (1 << 15)
+#define BTN_UP    (1 << 12)
+#define BTN_RIGHT (1 << 13)
+#define BTN_DOWN  (1 << 14)
+#define BTN_LEFT (1 << 15)
+#define BTN_TRIANGLE   0b00010000
+#define BTN_CIRCLE     0b00100000
+#define BTN_CROSS      0b01000000
+#define BTN_SQUARE     0b10000000
 
 
 /**
@@ -365,45 +365,6 @@ void read_cobalt_state() {
 
 		// Update global button state
 		current_button_state = new_state;
-		
-		// Check for changes and print
-		mutex_enter_blocking(&stdio_mutex);
-		if (up != prev_state.up) {
-			printf("Up: %s\n", up ? "Pressed" : "Released");
-			prev_state.up = up;
-		}
-		if (down != prev_state.down) {
-			printf("Down: %s\n", down ? "Pressed" : "Released");
-			prev_state.down = down;
-		}
-		if (left != prev_state.left) {
-			printf("Left: %s\n", left ? "Pressed" : "Released");
-			prev_state.left = left;
-		}
-		if (right != prev_state.right) {
-			printf("Right: %s\n", right ? "Pressed" : "Released");
-			prev_state.right = right;
-		}
-		if (topleft != prev_state.topleft) {
-			printf("Top Left: %s\n", topleft ? "Pressed" : "Released");
-			prev_state.topleft = topleft;
-		}
-		if (topright != prev_state.topright) {
-			printf("Top Right: %s\n", topright ? "Pressed" : "Released");
-			prev_state.topright = topright;
-		}
-		if (botleft != prev_state.botleft) {
-			printf("Bottom Left: %s\n", botleft ? "Pressed" : "Released");
-			prev_state.botleft = botleft;
-		}
-		if (botright != prev_state.botright) {
-			printf("Bottom Right: %s\n", botright ? "Pressed" : "Released");
-			prev_state.botright = botright;
-		}
-		mutex_exit(&stdio_mutex);
-
-		// debounce delay
-		sleep_ms(20);
 	}
 }
 
